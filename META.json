@@ -16,6 +16,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
+            "Data::Page" : 0,
             "Test::More" : 0,
             "Test::NoWarnings" : 0
          }
@@ -45,7 +46,7 @@
    "provides" : {
       "Data::Page::Pagination" : {
          "file" : "lib/Data/Page/Pagination.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
    "release_status" : "stable",
@@ -54,5 +55,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.001"
+   "version" : "0.002"
 }

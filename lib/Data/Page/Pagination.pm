@@ -6,7 +6,7 @@ use List::Util qw(min max);
 use namespace::autoclean;
 use syntax qw(method);
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 subtype IntGreaterThan2 => (
     as 'Int',
@@ -143,7 +143,7 @@ Data::Page::Pagination - calculates the pagination view
 
 =head1 VERSION
 
-0.001
+0.002
 
 =head1 SYNOPSIS
 
@@ -151,21 +151,21 @@ Data::Page::Pagination - calculates the pagination view
     require Data::Page;
 
     my $p = Data::Page::Pagination->new(
-        page         => Data::Page->new(90, 10, 5),
-        page_numbers => 7,
+        page         => Data::Page->new(110, 10, 6),
+        page_numbers => 11,
     );
 
-    $p->visible_previous_page;    # 4<    ( $p->previous_page )
+    $p->visible_previous_page;    # 5<    ( $p->previous_page )
     $p->visible_first_page;       # 1     ( $p->first_page )
     $p->visible_hidden_previous;  # ..
-    @{ $p->previous_pages };      # 2 3 4 ( max_length = $p->max_list_length )
-    $p->page->current_page;       # 5     ( $p->current_page )
-    @{ $p->next_pages };          # 6 7 8 ( max_length = $p->max_list_length )
+    @{ $p->previous_pages };      # 3 4 5 ( max_length = $p->max_list_length )
+    $p->page->current_page;       # 6     ( $p->current_page )
+    @{ $p->next_pages };          # 7 8 9 ( max_length = $p->max_list_length )
     $p->visible_hidden_next,      # ..
-    $p->visible_last_page;        # 9     ( $p->last_page )
-    $p->visible_next_page;        # >6    ( $p->next_page )
+    $p->visible_last_page;        # 11    ( $p->last_page )
+    $p->visible_next_page;        # >7    ( $p->next_page )
 
-    $p->render_plaintext eq '4< 1 .. 2 3 4 [5] 6 7 8 .. 9 >6';
+    $p->render_plaintext eq '5< 1 .. 3 4 5 [6] 7 8 9 .. 11 >7';
 
 =head1 EXAMPLE
 
@@ -181,7 +181,7 @@ The provided methods are simple enough to use them in a template system.
 
 =head2 method new
 
-"page_numbers" is the count of pages for dicectly access.
+"page_numbers" is the count of pages for directly access.
 
     my $pagination = Data::Page::Pagination->new(
         page         => Data::Page->new(...),

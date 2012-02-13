@@ -22,6 +22,7 @@ Module::Build->new(
     build_requires => {
         'Test::NoWarnings' => 0,
         'Test::More'       => 0, # dist Test-Simple
+        'Data::Page'       => 0,
     },
     recommends => {
         'Test::Pod'           => '1.14',

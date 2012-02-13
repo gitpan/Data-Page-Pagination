@@ -6,6 +6,7 @@ WriteMakefile
   'NAME' => 'Data::Page::Pagination',
   'VERSION_FROM' => 'lib/Data/Page/Pagination.pm',
   'PREREQ_PM' => {
+                   'Data::Page' => 0,
                    'List::Util' => 0,
                    'Moose' => 0,
                    'Moose::Util::TypeConstraints' => 0,
