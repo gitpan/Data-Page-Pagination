@@ -1,5 +1,10 @@
 Revision history for Perl extension Data::Page::Pagination.
 
+0.003  Fri Feb 17 21:15:00 2012
+- using MooseX::StrictConstructor
+- using MooseX::Types::Moose
+- removed unneeded build dependency Syntax::Feature::Function in 01_basics.t
+
 0.002  Mon Feb 13 18:00:00 2012
 - added missing build requires Data::Page
 

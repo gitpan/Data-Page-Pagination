@@ -10,6 +10,8 @@ WriteMakefile
                    'List::Util' => 0,
                    'Moose' => 0,
                    'Moose::Util::TypeConstraints' => 0,
+                   'MooseX::StrictConstructor' => 0,
+                   'MooseX::Types::Moose' => 0,
                    'Syntax::Feature::Method' => 0,
                    'Test::More' => 0,
                    'Test::NoWarnings' => 0,

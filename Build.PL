@@ -14,6 +14,8 @@ Module::Build->new(
         version                        => 0,
         Moose                          => 0,
         'Moose::Util::TypeConstraints' => 0,
+        'MooseX::StrictConstructor'    => 0,
+        'MooseX::Types::Moose'         => 0,
         'List::Util'                   => 0,
         'namespace::autoclean'         => 0,
         syntax                         => 0,

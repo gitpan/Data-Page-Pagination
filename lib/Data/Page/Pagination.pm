@@ -2,25 +2,31 @@ package Data::Page::Pagination; ## no critic (TidyCode)
 
 use Moose;
 use Moose::Util::TypeConstraints;
+use MooseX::StrictConstructor;
+use MooseX::Types::Moose qw(Int ArrayRef);
 use List::Util qw(min max);
 use namespace::autoclean;
 use syntax qw(method);
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 subtype IntGreaterThan2 => (
-    as 'Int',
+    as Int,
     where { $_ > 2 },
 );
 
 subtype IntGreaterThan0 => (
-    as 'Int',
+    as Int,
     where { $_ > 0 },
 );
 
+class_type DataPage => {
+    class => 'Data::Page',
+};
+
 has page => (
     is       => 'ro',
-    isa      => 'Data::Page',
+    isa      => 'DataPage',
     required => 1,
 );
 
@@ -51,7 +57,7 @@ has page_numbers => (
 
 has max_list_length => (
     is       => 'rw',
-    isa      => 'Int',
+    isa      => Int,
     init_arg => undef,
     lazy     => 1,
     default  => method {
@@ -61,7 +67,7 @@ has max_list_length => (
 
 has previous_pages => (
     is       => 'rw',
-    isa      => 'ArrayRef[IntGreaterThan0]',
+    isa      => ArrayRef['IntGreaterThan0'],
     init_arg => undef,
     lazy     => 1,
     default  => method {
@@ -76,7 +82,7 @@ has previous_pages => (
 
 has next_pages => (
     is       => 'rw',
-    isa      => 'ArrayRef[IntGreaterThan0]',
+    isa      => ArrayRef['IntGreaterThan0'],
     init_arg => undef,
     lazy     => 1,
     default  => method {
@@ -143,7 +149,7 @@ Data::Page::Pagination - calculates the pagination view
 
 =head1 VERSION
 
-0.002
+0.003
 
 =head1 SYNOPSIS
 
@@ -264,6 +270,10 @@ nothing
 L<Moose|Moose>
 
 L<Moose::Util::TypeConstraints|Moose::Util::TypeConstraints>
+
+L<MooseX::StrictConstructor|MooseX::StrictConstructor>
+
+L<MooseX::Types::Moose|MooseX::Types::Moose>
 
 L<List::Util|List::Util>
 

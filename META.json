@@ -35,6 +35,8 @@
             "List::Util" : 0,
             "Moose" : 0,
             "Moose::Util::TypeConstraints" : 0,
+            "MooseX::StrictConstructor" : 0,
+            "MooseX::Types::Moose" : 0,
             "Syntax::Feature::Method" : 0,
             "namespace::autoclean" : 0,
             "perl" : "5.006",
@@ -46,7 +48,7 @@
    "provides" : {
       "Data::Page::Pagination" : {
          "file" : "lib/Data/Page/Pagination.pm",
-         "version" : "0.002"
+         "version" : "0.003"
       }
    },
    "release_status" : "stable",
@@ -55,5 +57,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.002"
+   "version" : "0.003"
 }

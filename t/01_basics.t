@@ -7,7 +7,6 @@ use Test::More tests => 16 + 1;
 use Test::NoWarnings;
 use Test::Exception;
 use Data::Page;
-use syntax qw(function);
 
 BEGIN {
     use_ok('Data::Page::Pagination');

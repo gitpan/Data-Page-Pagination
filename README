@@ -1,4 +1,4 @@
-Data::Page::Pagination version 0.002
+Data::Page::Pagination version 0.003
 ====================================
 
 This module calculates the pagination view using a Date::Page object.
@@ -26,6 +26,8 @@ This module requires these other modules and libraries:
 
     Moose
     Moose::Util::TypeConstraints
+    MooseX::StrictConstructor
+    MooseX::Types::Moose
     List::Util
     namespace::autoclean
     syntax
