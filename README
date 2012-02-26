@@ -1,4 +1,4 @@
-Data::Page::Pagination version 0.003
+Data::Page::Pagination version 0.004
 ====================================
 
 This module calculates the pagination view using a Date::Page object.

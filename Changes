@@ -1,5 +1,8 @@
 Revision history for Perl extension Data::Page::Pagination.
 
+0.004  Sun Feb 26 07:07:00 2012
+- removed // to be less then v5.10 compatible
+
 0.003  Fri Feb 17 21:15:00 2012
 - using MooseX::StrictConstructor
 - using MooseX::Types::Moose
