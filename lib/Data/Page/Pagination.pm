@@ -8,7 +8,7 @@ use List::Util qw(min max);
 use namespace::autoclean;
 use syntax qw(method);
 
-our $VERSION = '0.004';
+our $VERSION = '0.005';
 
 subtype IntGreaterThan2 => (
     as Int,
@@ -149,7 +149,7 @@ Data::Page::Pagination - calculates the pagination view
 
 =head1 VERSION
 
-0.004
+0.005
 
 =head1 SYNOPSIS
 
@@ -309,5 +309,3 @@ All rights reserved.
 This module is free software;
 you can redistribute it and/or modify it
 under the same terms as Perl itself.
-
-=cut

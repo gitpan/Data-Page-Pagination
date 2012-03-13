@@ -1,5 +1,8 @@
 Revision history for Perl extension Data::Page::Pagination.
 
+0.005  Tue Mar 13 20:46:48 2012
+- repaired Makefile.PL
+
 0.004  Sun Feb 26 07:07:00 2012
 - removed // to be less then v5.10 compatible
 
